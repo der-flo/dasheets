@@ -1,8 +1,3 @@
-Thanks to Sven: Awesome name!
-
-# http://kapeli.com/docsets
-
-
 # Dasheets
 
 Generate your own cheatsheets as docsets for [Dash](http://kapeli.com/dash)!
