@@ -1,0 +1,38 @@
+cheatsheet do
+  title 'TMUX-Cheatsheet'
+  short_name 'tmux'
+
+  category do
+    id 'windows'
+    entry do
+      name 'create window'
+      command 'PREFIX-c'
+    end
+    entry do
+      name 'rename window'
+      command 'PREFIX-,'
+    end
+    entry do
+      name 'go to next window'
+      command 'PREFIX-n'
+    end
+  end
+
+  category do
+    id 'panes'
+    entry do
+      name 'split horizontally'
+      command 'PREFIX-|'
+      notes 'custom mapping'
+    end
+    entry do
+      name 'split horizontally'
+      command 'PREFIX-%'
+    end
+    entry do
+      name 'split vertically'
+      command 'PREFIX-"'
+    end
+  end
+end
+

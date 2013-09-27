@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %meta{charset: 'utf-8'}
+    %title= title
+    %link{rel: 'stylesheet', href: 'style.css'}
+  %body
+
+    %h1= title
+    - categories.each do |category|
+      %h2= category.id
+      %table
+        %tr
+          %th command
+          %th name
+          %th notes
+        - category.entries.each_with_index do |entry, index|
+          %tr{id: "#{category.id}-#{index}"}
+            %td
+              %code= entry.command
+            %td= entry.name
+            %td= entry.notes
