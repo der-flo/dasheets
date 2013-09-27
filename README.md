@@ -58,7 +58,7 @@ To convert this file to a docset, call
 ## Contributing
 
 Yes, please! Open issues and pull requests on the
-[GitHub page](https://github.com/Nix-wie-weg/dasheets)
+[GitHub page](https://github.com/Nix-wie-weg/dasheets).
 
 ## Thanks
 
