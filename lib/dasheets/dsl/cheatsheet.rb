@@ -17,5 +17,9 @@ class Dasheets::DSL::Cheatsheet
     @short_name = s if s
     @short_name
   end
+  def introduction(i = nil)
+    @introduction = i if i
+    @introduction
+  end
 end
 

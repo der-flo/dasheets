@@ -7,15 +7,24 @@
           rel: 'stylesheet', type: 'text/css'}
     %link{rel: 'stylesheet', href: 'style.css'}
   %body
+    %header
+      %h1= title
 
-    %h1= title
-    - categories.each do |category|
-      %h2= category.id
-      %table
-        - category.entries.each_with_index do |entry, index|
-          %tr{id: "#{category.id}-#{index}"}
-            %td
-              %code= entry.command
-            %td
-              %h3= entry.name
-              %div= entry.notes
+    %article
+      %p= introduction
+
+      - categories.each do |category|
+        %table
+          %tr
+            %th{colspan: 2}
+              %h2= category.id
+          - category.entries.each_with_index do |entry, index|
+            %tr{id: "#{category.id}-#{index}"}
+              %td.command
+                %code= entry.command
+              %td
+                %h3= entry.name
+                %div= entry.notes
+    %footer
+      Generated with
+      %a{href: 'https://github.com/Nix-wie-weg/dasheets'} Dasheets
