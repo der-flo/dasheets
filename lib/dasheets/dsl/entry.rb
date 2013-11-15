@@ -1,9 +1,15 @@
+require 'minidown'
+
+# TODO: Refactor Minidown usage?
+
 class Dasheets::DSL::Entry
   def initialize(&block)
     instance_eval(&block)
   end
   def name(name = nil)
-    @name = name if name
+    if name
+      @name = Minidown.parse(name).to_html
+    end
     @name
   end
   def command(c = nil)
@@ -11,7 +17,9 @@ class Dasheets::DSL::Entry
     @command
   end
   def notes(n = nil)
-    @notes = n if n
+    if n
+      @notes = Minidown.parse(n).to_html
+    end
     @notes
   end
 end

@@ -25,6 +25,9 @@
               %td
                 %h3= entry.name
                 %div= entry.notes
+      - if notes
+        %h2 Notes
+        = notes
     %footer
       Generated with
       %a{href: 'https://github.com/Nix-wie-weg/dasheets'} Dasheets

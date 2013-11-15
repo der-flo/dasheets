@@ -18,8 +18,11 @@ class Dasheets::DSL::Cheatsheet
     @short_name
   end
   def introduction(i = nil)
-    @introduction = i if i
+    @introduction = Minidown.parse(i).to_html if i
     @introduction
   end
+  def notes(n = nil)
+    @notes = Minidown.parse(n).to_html if n
+    @notes
+  end
 end
-

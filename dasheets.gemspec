@@ -25,4 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'haml', '~> 4.0.3'
   spec.add_dependency 'sqlite3', '~> 1.3.8'
   spec.add_dependency 'plist', '~> 3.1.0'
+  spec.add_dependency 'minidown', '~> 1.0.0'
 end

@@ -1,4 +1,5 @@
 require 'dasheets/version'
+require 'minidown'
 
 module Dasheets
   module DSL
