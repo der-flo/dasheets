@@ -4,4 +4,3 @@ $LOAD_PATH << File.expand_path('../../lib', __FILE__)
 require 'dasheets'
 require 'dasheets/cli'
 Dasheets::CLI.start
-
