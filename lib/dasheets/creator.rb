@@ -7,12 +7,14 @@ require 'ostruct'
 class Dasheets::Creator
   def initialize(cheatsheet)
     @cheatsheet = cheatsheet
-    @path = "#{@cheatsheet.short_name}.docset/Contents/"
+    @docset_path = "#{@cheatsheet.short_name}.docset"
+    @path = "#{@docset_path}/Contents/"
   end
 
   def generate
     FileUtils.rm_rf(@path)
     FileUtils.mkdir_p(@path)
+    copy_icon
     generate_html_file
     generate_plist_file
     generate_database
@@ -20,9 +22,15 @@ class Dasheets::Creator
 
   private
 
-  def generate_html_file
-    tpl_path = File.expand_path('../templates', __FILE__)
+  def tpl_path
+    File.expand_path('../templates', __FILE__)
+  end
 
+  def copy_icon
+    FileUtils.cp("#{tpl_path}/icon.png", @docset_path)
+  end
+
+  def generate_html_file
     # HTML
     template = File.read("#{tpl_path}/template.haml")
     engine = Haml::Engine.new(template)
