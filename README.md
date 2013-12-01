@@ -1,5 +1,7 @@
 # Dasheets
 
+[![Gem Version](https://badge.fury.io/rb/dasheets.png)](http://badge.fury.io/rb/dasheets)
+
 Generate your own cheatsheets as docsets for [Dash](http://kapeli.com/dash)!
 Use this simple command line tool and write your cheatsheets in an easy
 language (Ruby DSL).
