@@ -1,93 +1,79 @@
-/*
-#050405
-#041F38
-#1C4E70
-#40738F
-#E8F0F8
-*/
-
 h1, h2, h3, p, blockquote {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  line-height: 1.5em;
-  color: #050405;
-  background-color: #E8F0F8;
-  margin: 0;
-}
-
-header {
-  color: #E8F0F8;
-  background-color: #041F38;
-  padding: 1em;
-}
-article {
-  margin: 1em;
-}
-footer {
-  margin: 1em;
-  background-color: #1C4E70;
-  color: #E8F0F8;
-  padding: .5em;
-  border-radius: .5em;
-  text-align: center;
-}
-footer a {
-  color: #E8F0F8;
-}
-
-table {
-  border-collapse: collapse;
-  border: 2px solid #40738F;
-  border-radius: 10px;
-  margin-bottom: .1em;
-  width: 100%;
-}
-
-td, th {
-  padding: .1em .1em 2em .1em;
-}
-td.command {
-  min-width: 25%;
-}
-
-a {
-  color: #0069d6;
-}
-p {
-  margin-bottom: 9px;
-}
-h1, h2, h3 {
-  line-height: 36px;
-  margin: 1em 0 .5em 0;
-}
-h1 {
-  font-family: Lobster, sans-serif;
-  font-size: 48px;
-}
-h2 {
-  font-size: 24px;
-}
-h3 {
-  font-size: 1.2em;
-}
+  color: black;
+  background-color: white;
+  margin: 0; }
 
 code, pre {
-  font-family: 'Droid Sans Mono', monospace;
-}
-code {
-  background-color: #40738F;
-  color: #E8F0F8;
-  padding: .1em .3em;
-  border-radius: .5em;
+  font-family: 'Droid Sans Mono', monospace; }
+
+header {
+  color: #efefef;
+  background-color: #666666;
+  padding: 2em 1em 1em 4em; }
+
+h1 {
+  font-family: Lobster, sans-serif;
+  font-size: 60px; }
+
+footer {
+  margin: 1em;
+  background-color: #666666;
+  color: #efefef;
+  border-radius: 10px;
+  text-align: center; }
+  footer a {
+    color: #efefef; }
+
+article {
+  margin: 1em; }
+
+section {
+  border: 2px solid #666666;
+  border-radius: 10px;
+  background-color: #666666;
+  margin: .5em 0;
+  overflow: hidden; }
+
+h2 {
+  color: white;
   font-size: 1.5em;
-}
+  text-align: center; }
 
-th {
-  color: #E8F0F8;
-  background-color: #40738F;
-}
+table {
+  background-color: white;
+  border-collapse: collapse;
+  width: 100%; }
 
+td {
+  padding: 2px; }
+
+td.command {
+  width: 15%;
+  white-space: nowrap;
+  vertical-align: top;
+  padding: .3em 0 0 .3em; }
+  td.command code {
+    padding: .1em .6em;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px white inset;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background-color: #efefef;
+    color: #333; }
+
+td.description .name {
+  font-size: 1.2em; }
+
+tr:nth-child(even) {
+  background: #efefef; }
+
+a {
+  color: #666666; }
+
+p + p {
+  margin-top: .5em; }

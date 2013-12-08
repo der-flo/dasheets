@@ -1,0 +1,102 @@
+$white: #fff;
+$light_gray: #efefef;
+$dark_gray: #666;
+$black: #000;
+////////////////////////////////////////////////////////////////////////////////
+h1, h2, h3, p, blockquote {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: $black;
+  background-color: $white;
+  margin: 0;
+}
+code, pre {
+  font-family: 'Droid Sans Mono', monospace;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+header {
+  color: $light_gray;
+  background-color: $dark_gray;
+  padding: 2em 1em 1em 4em;
+}
+h1 {
+  font-family: Lobster, sans-serif;
+  font-size: 60px;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+footer {
+  margin: 1em;
+  background-color: $dark_gray;
+  color: $light_gray;
+  border-radius: 10px;
+  text-align: center;
+  a {
+    color: $light_gray;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+article {
+  margin: 1em;
+}
+
+section {
+  border: 2px solid $dark_gray;
+  border-radius: 10px;
+  background-color: $dark_gray;
+  margin: .5em 0;
+  overflow: hidden;
+}
+h2 {
+  color: $white;
+  font-size: 1.5em;
+  text-align: center;
+}
+table {
+  background-color: $white;
+  border-collapse: collapse;
+  width: 100%;
+}
+td {
+  padding: 2px;
+}
+td.command {
+  width: 15%;
+  white-space: nowrap;
+  vertical-align: top;
+  padding: .3em 0 0 .3em;
+  code {
+    // Nice key styling:
+    // https://developers.google.com/chrome-developer-tools/docs/shortcuts
+    padding: .1em .6em;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background-color: $light_gray;
+    color: #333;
+  }
+}
+
+td.description {
+  .name {
+    font-size: 1.2em;
+  }
+}
+tr:nth-child(even) {
+  background: $light_gray;
+}
+
+a {
+  color: $dark_gray;
+}
+p + p {
+  margin-top: .5em;
+}
+

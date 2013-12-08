@@ -14,17 +14,16 @@
       %p= introduction
 
       - categories.each do |category|
-        %table
-          %tr
-            %th{colspan: 2}
-              %h2= category.id
-          - category.entries.each_with_index do |entry, index|
-            %tr{id: "#{category.id}-#{index}"}
-              %td.command
-                %code= entry.command
-              %td
-                %h3= entry.name
-                %div= entry.notes
+        %section
+          %h2= category.id
+          %table
+            - category.entries.each_with_index do |entry, index|
+              %tr{id: "#{category.id}-#{index}"}
+                %td.command
+                  %code= entry.command
+                %td.description
+                  .name= entry.name
+                  .notes= entry.notes
       - if notes
         %h2 Notes
         = notes
