@@ -40,24 +40,31 @@ footer {
     color: $light_gray;
   }
 }
-
 ////////////////////////////////////////////////////////////////////////////////
-
+// notes
+section.notes {
+  margin-top: 1em;
+  h2 {
+    color: $dark_gray;
+    font-size: 1.5em;
+  }
+}
+////////////////////////////////////////////////////////////////////////////////
 article {
   margin: 1em;
 }
-
-section {
+section.category {
   border: 2px solid $dark_gray;
   border-radius: 10px;
   background-color: $dark_gray;
   margin: .5em 0;
   overflow: hidden;
-}
-h2 {
-  color: $white;
-  font-size: 1.5em;
-  text-align: center;
+  h2 {
+    color: $white;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  padding-bottom: 5px;
 }
 table {
   background-color: $white;

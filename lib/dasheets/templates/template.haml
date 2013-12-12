@@ -14,7 +14,7 @@
       %p= introduction
 
       - categories.each do |category|
-        %section
+        %section.category
           %h2= category.id
           %table
             - category.entries.each_with_index do |entry, index|
@@ -25,8 +25,9 @@
                   .name= entry.name
                   .notes= entry.notes
       - if notes
-        %h2 Notes
-        = notes
+        %section.notes
+          %h2 Notes
+          = notes
     %footer
       Generated with
       %a{href: 'https://github.com/Nix-wie-weg/dasheets'} Dasheets
