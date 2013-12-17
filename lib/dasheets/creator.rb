@@ -27,7 +27,7 @@ class Dasheets::Creator
   end
 
   def copy_icon
-    FileUtils.cp("#{tpl_path}/icon.png", @docset_path)
+    FileUtils.cp("#{tpl_path}/icon.tiff", @docset_path)
   end
 
   def generate_html_file
