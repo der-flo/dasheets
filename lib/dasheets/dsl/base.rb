@@ -1,3 +1,6 @@
+require 'minidown'
+require 'sanitize'
+
 module Dasheets
   module DSL
     class Base
@@ -26,6 +29,9 @@ module Dasheets
               instance_variable_set("@#{name}", val)
             end
             instance_variable_get("@#{name}")
+          end
+          define_method("tags_stripped_#{name}") do
+            Sanitize.clean(send(name))
           end
         end
       end

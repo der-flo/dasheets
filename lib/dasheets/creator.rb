@@ -67,7 +67,7 @@ class Dasheets::Creator
     @cheatsheet.categories.each do |category|
       category.entries.each_with_index do |entry, index|
         sql = 'INSERT INTO searchIndex(name, type, path) VALUES (?, ?, ?)'
-        db.execute(sql, entry.name, 'Guide',
+        db.execute(sql, entry.tags_stripped_name, 'Guide',
                    "index.html\##{category.id}-#{index}")
       end
     end
