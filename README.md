@@ -16,7 +16,7 @@ Write a file (here `tmux.cheatsheet`) containing your cheatsheet-data, e. g.:
 
 ```
 cheatsheet do
-  title 'tmux cheatsheet'
+  title 'tmux' # Will be displayed by Dash in the docset list
   short_name 'tmux' # Used for the filename of the docset
   introduction 'My *awesome* cheatsheet for tmux'
 
