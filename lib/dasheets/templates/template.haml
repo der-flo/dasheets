@@ -20,7 +20,9 @@
             - category.entries.each_with_index do |entry, index|
               %tr{id: "#{category.id}-#{index}"}
                 %td.command
-                  %code= entry.command
+                  - entry.command.each do |command|
+                    %p
+                      %code= command
                 %td.description
                   .name= entry.name
                   .notes= entry.notes
