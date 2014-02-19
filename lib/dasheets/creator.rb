@@ -48,6 +48,7 @@ class Dasheets::Creator
       'CFBundleIdentifier' => @cheatsheet.short_name,
       'CFBundleName' => @cheatsheet.title,
       'DocSetPlatformFamily' => @cheatsheet.short_name,
+      'DashDocSetFamily' => 'dasheet',
       'isDashDocset' => true,
       'dashIndexFilePath' => 'index.html'
     }
