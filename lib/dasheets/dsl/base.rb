@@ -9,10 +9,6 @@ module Dasheets
       end
       private
 
-      def parse_markdown(str)
-        Minidown.parse(i).to_html
-      end
-
       def self.define_attrs(*names)
         names.each do |name|
           define_method(name) do |val = nil|
@@ -25,7 +21,7 @@ module Dasheets
         names.each do |name|
           define_method(name) do |val = nil|
             if val
-              val = Minidown.parse(val).to_html
+              val = Minidown.render(val)
               instance_variable_set("@#{name}", val)
             end
             instance_variable_get("@#{name}")
